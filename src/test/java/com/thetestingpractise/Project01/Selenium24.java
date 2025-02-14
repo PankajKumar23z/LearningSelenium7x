@@ -75,25 +75,7 @@ public class Selenium24 {
         WebElement error_message = driver.findElement(By.className("notification-box-description"));
         Assert.assertEquals(error_message .getText(),"Your email, password, IP address or location did not match");
 
-        // Link text - Full Match and
-        // partial text only work - Contains - Partial Match
 
-
-
-//<a href="https://vwo.com/free-trial/?utm_medium=website&amp;utm_source=login-page&amp;utm_campaign=mof_eg_loginpage" class="text-link" data-qa="bericafeqo"
-// >Start a free trial</a>
-
-       // WebElement link_webelement= driver.findElement(By.linkText("Start a free trial"));
-        //link_webelement.click();
-
-        WebElement Partial_link_webelement= driver.findElement(By.partialLinkText("Start a free trial"));
-        Partial_link_webelement.click();
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         driver.quit();
 
