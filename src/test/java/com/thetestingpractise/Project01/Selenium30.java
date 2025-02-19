@@ -6,6 +6,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
+
+
 public class Selenium30 {
 
 
@@ -35,8 +39,29 @@ public class Selenium30 {
         searchBoxButton.click();
 
 
-        Thread.sleep(2000);
-        driver.quit();
+        Thread.sleep(3000);
+
+        // Print all the titles
+
+        List<WebElement> searchTitles = driver.findElements(By.cssSelector(".s-item__title"));
+
+        // Xpath - //div[@class="s-item__title"]/span  -- 62
+
+        List<WebElement> searchTitlesPrices = driver.findElements(By.cssSelector(".s-item__price"));
+
+        // Xpath - //span[@class="s-item__price"]  -  61
+
+        // .s_item__title > 63 , .s-item__price ->
+        // max -> loop where
+        int size = Math.min(searchTitles.size(), searchTitlesPrices.size());  // 61
+        for (int i = 0; i < size; i++) {
+
+            System.out.println("Title: " + searchTitles.get(i).getText() + " || " + "Price: " + searchTitlesPrices.get(i).getText());
+            System.out.println();
+
+        }
+
 
     }
 }
+
