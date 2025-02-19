@@ -25,8 +25,8 @@ public class Selenium31 {
 
         // #gh-ac
         // input[id="gh-ac"] -> xpath -> //input[@id="gh-ac"]
-        WebElement Accountlogin = driver.findElement(By.xpath ()//span[@class='GHWUserProfile_UserIcon']));
-                Accountlogin.Click();
+        // WebElement Accountlogin = driver.findElement(By.xpath ()//span[@class='GHWUserProfile_UserIcon']));
+       //   Accountlogin.Click();
 
         WebElement searchBoxButton = driver.findElement(By.xpath("//span[@class='gh-search-button__label']"));
         searchBoxButton.click();
@@ -36,3 +36,4 @@ public class Selenium31 {
         driver.quit();
 
     }
+}
