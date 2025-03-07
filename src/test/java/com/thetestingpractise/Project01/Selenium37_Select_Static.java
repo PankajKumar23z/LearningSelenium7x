@@ -15,6 +15,8 @@ public class Selenium37_Select_Static {
         driver.manage().window().maximize();
 
         WebElement element_select = driver.findElement(By.id("dropdown"));
+
+        // there is select class in selenium
         Select select = new Select(element_select);
         // select.selectByVisibleText("Option 2");
         select.selectByIndex(2);
